@@ -16,4 +16,6 @@ public class TipoCaso {
     public TipoCaso() {
     }
     
+    
+    
 }

@@ -21,13 +21,12 @@ public class Detective {
     public Detective() {
     }
 
-    public Detective(String nombreClave, long numDeIdentificacion, String nombre, String apellido, int añosDeExperiencia, String tipoDeCaso) {
+    public Detective(String nombreClave, long numDeIdentificacion, String nombre, String apellido, int añosDeExperiencia) {
         this.nombreClave = nombreClave;
         this.numDeIdentificacion = numDeIdentificacion;
         this.nombre = nombre;
         this.apellido = apellido;
         this.añosDeExperiencia = añosDeExperiencia;
-        this.tipoDeCaso = tipoDeCaso;
     }
 
     /**
@@ -113,4 +112,9 @@ public class Detective {
     public void setTipoDeCaso(String tipoDeCaso) {
         this.tipoDeCaso = tipoDeCaso;
     }
+    
+    public String ToString(){
+        return "nombreClave: "+nombreClave+" nombre: "+nombre + " Apellido: "+ apellido + " Tipo Caso: "+tipoDeCaso+" Años de Experiencia: "+añosDeExperiencia;
+    }
+    
 }

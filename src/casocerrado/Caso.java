@@ -13,10 +13,20 @@ public class Caso {
     private String descripCaso;
     private int codigoDePrioridad;
     private String nombClave;
-    private TipoCaso tipocaso;
+    private String tipocaso;
+
     private  Detective detective;
     private Bitacora bitacora;
     private Sospechoso sospechoso;
+    
+    public String getTipocaso() {
+        return tipocaso;
+    }
+
+    public void setTipocaso(String tipocaso) {
+        this.tipocaso = tipocaso;
+    }
+    
 
     public Caso(int numeroCaso, String descripCaso, int codigoDePrioridad, String nombClave) {
         this.numeroCaso = numeroCaso;
@@ -25,6 +35,19 @@ public class Caso {
         this.nombClave = nombClave;
 
     }
+
+    public Caso(int numeroCaso, String descripCaso, int codigoDePrioridad, String nombClave, String tipocaso, Detective detective, Bitacora bitacora, Sospechoso sospechoso) {
+        this.numeroCaso = numeroCaso;
+        this.descripCaso = descripCaso;
+        this.codigoDePrioridad = codigoDePrioridad;
+        this.nombClave = nombClave;
+        this.tipocaso = tipocaso;
+        this.detective = detective;
+        this.bitacora = bitacora;
+        this.sospechoso = sospechoso;
+    }
+    
+    
 
     public Caso() {
         this.bitacora=new Bitacora();
@@ -90,8 +113,8 @@ public class Caso {
     /**
      * @return the detective
      */
-    public Detective getDetective() {
-        return detective;
+    public String getDetective() {
+        return detective.ToString();
     }
 
     /**
@@ -100,4 +123,6 @@ public class Caso {
     public void setDetective(Detective detective) {
         this.detective = detective;
     }
+    
+    
 }
